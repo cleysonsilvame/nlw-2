@@ -13,6 +13,6 @@ export default class ConnectionsController{
       user_id,
     });
 
-    return response.status(201).send()
+    return response.status(201).send();
   }
 }
