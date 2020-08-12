@@ -23,24 +23,24 @@ interface TeacherItemsProps {
 const TeacherItem: React.FC<TeacherItemsProps> = ({teacher}) => {
   return (
     <article className="teacher-item">
-    <header>
-      <img src={teacher.avatar} alt={teacher.name}/>
-      <div>
-        <strong>{teacher.name}</strong>
-        <span>{teacher.subject}</span>
-      </div>
-    </header>
-    <p>{teacher.bio}</p>
-    <footer>
-      <p>
-        Preço/Hora
-        <strong>R$ {teacher.cost}</strong>
-      </p>
-      <button type="button">
-        <img src={whatsappIcon} alt="Entrar em contato"/>
-        Entre em contato
-      </button>
-    </footer>
+      <header>
+        <img src={teacher.avatar} alt={teacher.name}/>
+        <div>
+          <strong>{teacher.name}</strong>
+          <span>{teacher.subject}</span>
+        </div>
+      </header>
+      <p>{teacher.bio}</p>
+      <footer>
+        <p>
+          Preço/Hora
+          <strong>R$ {teacher.cost}</strong>
+        </p>
+        <a href={`https://wa.me/${teacher.whatsapp}`} target="_blank">
+          <img src={whatsappIcon} alt="Entrar em contato"/>
+          Entre em contato
+        </a>
+      </footer>
     </article>
   );
 }
