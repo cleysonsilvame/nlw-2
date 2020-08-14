@@ -61,7 +61,7 @@ function TeacherForm() {
       history.push('/');
     }).catch(() => {
       alert('Erro no cadastro!');
-    })
+    });
   }
 
   return (
